@@ -8,8 +8,8 @@ body {
 #misile {
   width: 4%;
   height: auto;
-  position: fixed;
-  bottom: 19%;
+  position: absolute;
+  top: 71%;
   left: 22%;
   border: none;
 }
@@ -17,8 +17,8 @@ body {
 #bird {
   width: 15%;
   height: auto;
-  position: relative;
-  right: 15%;
-  bottom: 10%;
+  position: absolute;
+  top: 20%;
+  left: 30%;
   border: none;
 }
