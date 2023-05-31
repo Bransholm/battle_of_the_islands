@@ -5,6 +5,11 @@ body {
   background-repeat: no-repeat;
 }
 
+.screen {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 #misile_sprite {
   width: 4%;
   height: auto;
@@ -28,4 +33,8 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 300px;
   font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
