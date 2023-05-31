@@ -9,7 +9,7 @@ body {
   width: 4%;
   height: auto;
   position: absolute;
-  bottom: 14%;
+  top: 69%;
   left: 22%;
   border: none;
 }
@@ -21,4 +21,11 @@ body {
   top: 20%;
   left: 20%;
   border: none;
+}
+
+.game_ui_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 300px;
+  font-weight: bold;
 }
