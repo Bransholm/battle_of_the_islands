@@ -5,7 +5,7 @@ body {
   background-repeat: no-repeat;
 }
 
-#misile_img {
+#misile_sprite {
   width: 4%;
   height: auto;
   position: absolute;
@@ -14,7 +14,7 @@ body {
   border: none;
 }
 
-#bird_img {
+#bird_sprite {
   width: 13%;
   height: auto;
   position: absolute;
