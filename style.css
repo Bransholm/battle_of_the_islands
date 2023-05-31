@@ -5,7 +5,7 @@ body {
   background-repeat: no-repeat;
 }
 
-#misile {
+#misile_img {
   width: 4%;
   height: auto;
   position: absolute;
@@ -14,11 +14,11 @@ body {
   border: none;
 }
 
-#bird {
-  width: 15%;
+#bird_img {
+  width: 13%;
   height: auto;
   position: absolute;
   top: 20%;
-  left: 30%;
+  left: 20%;
   border: none;
 }
