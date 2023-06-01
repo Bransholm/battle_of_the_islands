@@ -62,7 +62,6 @@ button {
 }
 
 #start_container {
-  position: relative;
   background-color: blueviolet;
   width: 470px;
   display: grid;
@@ -81,7 +80,6 @@ button {
 }
 
 #game_over_container {
-  position: relative;
   background-color: blueviolet;
   width: 470px;
   display: grid;
@@ -100,7 +98,6 @@ button {
 }
 
 #level_complete_container {
-  position: relative;
   background-color: blueviolet;
   width: 470px;
   display: grid;
@@ -127,7 +124,7 @@ button {
 }
 
 #game,
-#level_complete,
+#start,
 #game_over,
 .hidden {
   display: none;

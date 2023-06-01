@@ -12,3 +12,13 @@ function start() {
     document.querySelector("#button_level_complete").addEventListener("click", showStartScreen);
 }
 
+function startGame() {
+    
+}
+
+function showStartScreen () {
+    document.querySelector("#start").classList.remove("hidden");
+    document.querySelector("#game_over").classList.add("hidden");
+    document.querySelector("#level_complete").classList.add("hidden");
+    console.log("Show start screen");
+}
