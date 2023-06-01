@@ -2,16 +2,13 @@
 
 window.addEventListener("load", start)
 
+let points = 0;
+let lives = 0;
+
 function start() {
-    buttons();
-    console.log("Javascript is running wild")
+    console.log("Start - Javascript is running wild");
+    document.querySelector("#button_start_game").addEventListener("click", startGame);
+    document.querySelector("#button_game_over").addEventListener("click", startGame);
+    document.querySelector("#button_level_complete").addEventListener("click", showStartScreen);
 }
 
-function buttons() { 
-    document.querySelector("#level_complete_button").addEventListener("click", showStart);
-}
-
-function showStart() {
-    document.querySelector("#level_complete").classList.add("hidden");
-    console.log("Hidden")
-}
