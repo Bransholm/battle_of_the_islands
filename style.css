@@ -1,13 +1,52 @@
 body {
-  background-color: #000000;
-  background-image: url(images/boti_bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  font-weight: bold;
+  margin: 0;
 }
 
-.screen {
+#screen {
+  aspect-ratio: 16 / 9;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template: 100% / 100%;
+}
+
+#game {
+  grid-area: 1 / 1;
+  display: grid;
+  grid-template: 100% / 100%;
+}
+
+#game_background {
+  grid-area: 1 /1;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-image: url(images/boti_bg.png);
+}
+
+#game_elements {
+  grid-area: 1 / 1;
+  overflow: hidden;
+  position: relative;
+}
+
+#game_ui {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-weight: bold;
+}
+
+#start {
+  grid-area: 1 / 1;
+}
+
+#game_over {
+  grid-area: 1 / 1;
+}
+
+#level_complete {
+  grid-area: 1 / 1;
 }
 
 #misile_sprite {
@@ -26,13 +65,6 @@ body {
   top: 20%;
   left: 20%;
   border: none;
-}
-
-.game_ui_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  max-width: 300px;
-  font-weight: bold;
 }
 
 .hidden {

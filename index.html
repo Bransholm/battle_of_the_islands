@@ -8,35 +8,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
     <!-- screen -->
-    <div id="screen" class="screen">
-
+    <div id="screen">
       <!-- Game -->
       <div id="game">
-        <div id="game_background"></div>
-        
+        <div id="game_background">GAME BACKGROUND</div>
+
         <!-- Game elements -->
         <div id="game_elements">
-          <div id="rocket_container"><img id="misile_sprite" src="images/boti_misile.png" alt="" /></div>
-          <div id="bird_container"><img id="bird_sprite" src="images/boti_bird.png" alt="" /></div>
-
+          <div id="rocket_container">
+            <img id="misile_sprite" src="images/boti_misile.png" alt="" />
+          </div>
+          <div id="bird_container">
+            <img id="bird_sprite" src="images/boti_bird.png" alt="" />
+          </div>
         </div>
 
-        <div id="game_foreground"></div>
-        
         <!-- Game User Interface -->
-        <div id="game_ui" class="game_ui_grid">
-            <div id="score_board">Score: 1000</div>
-            <div id="life_board">Liv: 3</div>
-            <div id="time_board">Time: 2.30</div>
+        <div id="game_ui">
+          <div id="score_board">Score: 1000</div>
+          <div id="life_board">Liv: 3</div>
+          <div id="time_board">Time: 2.30</div>
         </div>
       </div>
-      
-      <div id="start" class="hidden">START</div>
-      <div id="game_over" class="hidden">GAME OVER</div>
-      <div id="level_complete" class="hidden">LEVEL COMPLETE</div>
 
+      <div id="start" class="hidden">START</div>
+      
+      <div id="game_over" class="hidden">GAME OVER</div>
+      
+      <div id="level_complete" class="hidden">LEVEL COMPLETE</div>
+    
     </div>
   </body>
 </html>
