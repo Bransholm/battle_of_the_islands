@@ -1,4 +1,5 @@
 body {
+  background-color: black;
   font-weight: bold;
   margin: 0;
 }
@@ -67,6 +68,7 @@ body {
   border: none;
 }
 
+#game,
 .hidden {
   display: none;
 }
