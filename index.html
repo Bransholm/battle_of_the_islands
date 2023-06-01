@@ -9,46 +9,64 @@
   </head>
   <body>
     <!-- screen -->
-    <div id="screen">
+    <main id="screen">
       <!-- Game -->
-      <div id="game" class="hidden">
-        <div id="game_background" class="hiddenn">GAME BACKGROUND</div>
+      <section id="game">
+        <article id="game_background">GAME BACKGROUND</article>
 
         <!-- Game elements -->
-        <div id="game_elements">
+        <article id="game_elements">
           <div id="rocket_container">
             <img id="misile_sprite" src="images/boti_misile.png" alt="" />
           </div>
           <div id="bird_container">
             <img id="bird_sprite" src="images/boti_bird.png" alt="" />
           </div>
-        </div>
+        </article>
 
         <!-- Game User Interface -->
-        <div id="game_ui">
-          <div id="score_board">Score: 1000</div>
+        <article id="game_ui" class="hidden">
+          <div id="score_board" class="hidden">Score: 1000</div>
           <div id="life_board">Liv: 3</div>
           <div id="time_board">Time: 2.30</div>
+        </article>
+      </section>
+
+      <section id="start">
+        <div id="start_container">
+        <p>
+          <h2>Battle of the islands</h2>
+          Rescure the island from the atackers and survive<br />
+          Shoot a rocket and get 200 points else you miss a live<br />
+          You have 3 lives all in all. Stay alive to win the game<br />
+          Shot a bird and get 500 points. Get as many points as possible<br />
+          <center><button id="btn_start">Start game</button></center>
+        </p>
         </div>
-      </div>
-
-      <div id="start" class="hidden">START</div>
+      </section>
       
-      <div id="game_over" class="hidden">
-        <h2>Game over</h2>
-        <p>You have lost... Stop crying</p>
-        <p>This was the worst effort ever seen!</p>
-        <button>Try again</button>
-      </div>
+      <section id="game_over">
+        <div id="game_over_container">
+          <p>
+            <h2>Game over</h2>
+            You have lost... Stop crying...<br />
+            This is the worst effort ever seen!<br />
+            <center><button id="btn_game_over">Try again</button></center>
+          </p>
+        </div>
+      </section>
       
-      <div id="level_complete" class="hidden">
-        <h2>Congratulation - You have won!</h2>
-        <p>You have saved the iland...</p>
-        <p>Good job!</p>
-        <button>Try again</button>
-
-      </div>
-    
-    </div>
+      <section id="level_complete">
+        <div id="level_complete_container">
+        <p>
+          <h2>Congratulation - You have won</h2>
+          You have saved the island...<br />
+          Good job!<br />
+          <center><button id="btn_level_complete">Try again</button></center>
+        </p>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
   </body>
 </html>

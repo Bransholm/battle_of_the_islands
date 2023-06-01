@@ -1,7 +1,20 @@
 body {
   background-color: black;
+  color: white;
   font-weight: bold;
   margin: 0;
+}
+
+button {
+  border-radius: 25px;
+  width: 110px;
+  margin-top: 30px;
+  font-weight: bold;
+  background-color: palevioletred;
+  color: white;
+  font-size: 16px;
+  border-color: black;
+  border-width: 3px;
 }
 
 #screen {
@@ -40,14 +53,59 @@ body {
 
 #start {
   grid-area: 1 / 1;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-image: url(images/boti_bg.png);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+#start_container {
+  position: relative;
+  background-color: blueviolet;
+  width: 450px;
+  display: grid;
+  border-radius: 25px;
+  text-align: center;
 }
 
 #game_over {
   grid-area: 1 / 1;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-image: url(images/boti_bg.png);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+#game_over_container {
+  position: relative;
+  background-color: blueviolet;
+  width: 450px;
+  display: grid;
+  border-radius: 25px;
+  text-align: center;
 }
 
 #level_complete {
   grid-area: 1 / 1;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-image: url(images/boti_bg.png);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+#level_complete_container {
+  position: relative;
+  background-color: blueviolet;
+  width: 450px;
+  display: grid;
+  border-radius: 25px;
+  text-align: center;
 }
 
 #misile_sprite {
@@ -69,6 +127,8 @@ body {
 }
 
 #game,
+#level_complete,
+#game_over,
 .hidden {
   display: none;
 }
