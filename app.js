@@ -24,6 +24,7 @@ function startGame() {
     document.querySelector("#rocket_container").addEventListener("mousedown", clickRocket);
     document.querySelector("#rocket_container").addEventListener("animationiteration", restartRocket);
     showPoints();
+    resetGameVariables();
 }
 
 function showStartScreen () {
@@ -38,6 +39,11 @@ function showLevelComplete () {
   document.querySelector("#game_over").classList.remove("hidden");
   document.querySelector("#level_complete").classList.add("hidden");
   console.log("Show game over screen");
+}
+
+function resetGameVariables() {
+    points = 0;
+    lives = 3;
 }
 
 function startRocket() {
@@ -82,4 +88,12 @@ function showPoints() {
     document.querySelector("#score_board").textContent = `Score: ${points}`;
 }
 
-// HUSK
+// Mangler
+// Fugl(-liv)
+// liv (hvis liv=0 dræb ellers fortsæt)
+// timer (dø efter x sekunder && vind med fugl > 10 eller point)
+// å
+// å
+// å
+// å
+// å
