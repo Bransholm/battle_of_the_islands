@@ -147,9 +147,24 @@ button {
 /* position classes */
 
 .position1 {
+  left: -25vw;
+}
+
+.position2 {
+  left: -5vw;
+}
+
+.position3 {
   left: 15vw;
 }
 
+.position4 {
+  left: 25vw;
+}
+
+.position5 {
+  left: 35vw;
+}
 
 /* animations */
 
@@ -162,15 +177,34 @@ button {
 
 @keyframes falling {
     0% {
-        transform: translate(20, -100%);
+        transform: translate(0, -100%);
     }
 
     100% {
         transform: translate(62vw
-        , 38.25vw);
+        , 56.25vw);
     }
 }
 
+.paused {
+    animation-play-state: paused;
+}
+
+.zoom_in {
+    animation-name: zoom_in;
+    animation-duration: 1.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom_in {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
 
 /* drag and drop */
 *{
