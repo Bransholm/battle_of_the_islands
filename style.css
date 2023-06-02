@@ -108,28 +108,75 @@ button {
   text-align: center;
 }
 
-#misile_sprite {
-  width: 4%;
-  height: auto;
-  position: absolute;
-  top: 69%;
-  left: 22%;
-  border: none;
-}
-
-#bird_sprite {
-  width: 13%;
-  height: auto;
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  border: none;
-}
-
 .hidden,
 #start.hidden,
 #level_complete.hidden,
 #game_over.hidden,
 #game.hidden {
   display: none;
+}
+
+
+/* game elements */
+
+#rocket_container {
+  position: absolute;
+  top: 0;
+  /* position: 0; */
+}
+
+#rocket_sprite {
+  width: 25%;
+  height: auto;
+  border: none;
+}
+
+#bird_container {
+  position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+#bird_sprite {
+  width: 25%;
+  height: auto;
+  border: none;
+}
+
+
+/* position classes */
+
+.position1 {
+  left: 15vw;
+}
+
+
+/* animations */
+
+.falling {
+    animation-name: falling;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes falling {
+    0% {
+        transform: translate(20, -100%);
+    }
+
+    100% {
+        transform: translate(62vw
+        , 38.25vw);
+    }
+}
+
+
+/* drag and drop */
+*{
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
 }
