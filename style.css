@@ -59,6 +59,7 @@ button {
   display: grid;
   justify-content: center;
   align-content: center;
+  z-index: 999;
 }
 
 #start_container {
@@ -77,6 +78,7 @@ button {
   display: grid;
   justify-content: center;
   align-content: center;
+  z-index: 999;
 }
 
 #game_over_container {
@@ -95,6 +97,7 @@ button {
   display: grid;
   justify-content: center;
   align-content: center;
+  z-index: 999;
 }
 
 #level_complete_container {
@@ -123,9 +126,10 @@ button {
   border: none;
 }
 
-#game,
-#start,
-#game_over,
-.hidden {
+.hidden,
+#start.hidden,
+#level_complete.hidden,
+#game_over.hidden,
+#game.hidden {
   display: none;
 }
