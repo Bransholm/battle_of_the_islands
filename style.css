@@ -206,7 +206,7 @@ button {
     }
 }
 
-/* drag and drop */
+/* drag and drop and select*/
 *{
   user-select: none;
 }

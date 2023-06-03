@@ -1,6 +1,6 @@
 "use strict"
 
-window.addEventListener("load", start)
+window.addEventListener("load", start);
 
 let points = 0;
 let lives = 0;
@@ -52,7 +52,7 @@ function startRocket() {
 }
 
 function clickRocket() {
-    const rocket = this
+    const rocket = this;
     // document.querySelector("#rocket_container").removeEventListener("mousedown", clickRocket);
     rocket.removeEventListener("mousedown", clickRocket);
     rocket.classList.add("paused");
@@ -63,7 +63,7 @@ function clickRocket() {
 }
 
 function rocketGone() {
-    this.removeEventListener("animationend", rocketGone)
+    this.removeEventListener("animationend", rocketGone);
     this.querySelector("img").classList.remove("zoom_in");
     this.classList.remove("paused");
     this.addEventListener("mousedown", clickRocket);
@@ -92,8 +92,4 @@ function showPoints() {
 // Fugl(-liv)
 // liv (hvis liv=0 dræb ellers fortsæt)
 // timer (dø efter x sekunder && vind med fugl > 10 eller point)
-// å
-// å
-// å
-// å
-// å
+// Lydeffekter og musik
