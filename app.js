@@ -50,7 +50,7 @@ function resetGameVariables() {
 // Rocket
 function startRocket() {
     document.querySelector("#rocket_container").classList.add("rocket_falling");
-    document.querySelector("#rocket_container").classList.add("rocket_position1");
+    document.querySelector("#rocket_container").classList.add("rocket_position8");
 }
 
 function clickRocket() {

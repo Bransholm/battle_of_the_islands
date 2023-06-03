@@ -218,6 +218,80 @@ button {
   left: 60vw;
 }
 
+
+.bird_position1 {
+  left: 60vw;
+}
+
+.bird_position2 {
+  left: -20vw;
+}
+
+.bird_position3 {
+  left: -15vw;
+}
+
+.bird_position4 {
+  left: -10vw;
+}
+
+.bird_position5 {
+  left: -5vw;
+}
+
+.bird_position6 {
+  left: 0vw;
+}
+
+.bird_position7 {
+  left: 5vw;
+}
+
+.bird_position8 {
+  left: 10vw;
+}
+
+.bird_position9 {
+  left: 15vw;
+}
+
+.bird_position10 {
+  left: 20vw;
+}
+
+.bird_position11 {
+  left: 25vw;
+}
+
+.bird_position12 {
+  left: 30vw;
+}
+
+.bird_position13 {
+  left: 35vw;
+}
+
+.bird_position14 {
+  left: 40vw;
+}
+
+.bird_position15 {
+  left: 45vw;
+}
+
+.bird_position16 {
+  left: 50vw;
+}
+
+.bird_position17 {
+  left: 55vw;
+}
+
+.bird_position18 {
+  left: 60vw;
+}
+
+
 /* animations */
 
 .rocket_falling {
