@@ -146,36 +146,88 @@ button {
 
 /* position classes */
 
-.position1 {
-  left: -25vw;
+.rocket_position1 {
+  left: 60vw;
 }
 
-.position2 {
+.rocket_position2 {
+  left: -20vw;
+}
+
+.rocket_position3 {
+  left: -15vw;
+}
+
+.rocket_position4 {
+  left: -10vw;
+}
+
+.rocket_position5 {
   left: -5vw;
 }
 
-.position3 {
+.rocket_position6 {
+  left: 0vw;
+}
+
+.rocket_position7 {
+  left: 5vw;
+}
+
+.rocket_position8 {
+  left: 10vw;
+}
+
+.rocket_position9 {
   left: 15vw;
 }
 
-.position4 {
+.rocket_position10 {
+  left: 20vw;
+}
+
+.rocket_position11 {
   left: 25vw;
 }
 
-.position5 {
+.rocket_position12 {
+  left: 30vw;
+}
+
+.rocket_position13 {
   left: 35vw;
+}
+
+.rocket_position14 {
+  left: 40vw;
+}
+
+.rocket_position15 {
+  left: 45vw;
+}
+
+.rocket_position16 {
+  left: 50vw;
+}
+
+.rocket_position17 {
+  left: 55vw;
+}
+
+.rocket_position18 {
+  left: 60vw;
 }
 
 /* animations */
 
-.falling {
-    animation-name: falling;
+.rocket_falling {
+    animation-name: rocket_falling;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-@keyframes falling {
+@keyframes rocket_falling {
     0% {
         transform: translate(0, -100%);
     }

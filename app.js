@@ -23,6 +23,7 @@ function startGame() {
     startRocket();
     document.querySelector("#rocket_container").addEventListener("mousedown", clickRocket);
     document.querySelector("#rocket_container").addEventListener("animationiteration", restartRocket);
+    startBird();
     showPoints();
     resetGameVariables();
 }
@@ -46,9 +47,10 @@ function resetGameVariables() {
     lives = 3;
 }
 
+// Rocket
 function startRocket() {
-    document.querySelector("#rocket_container").classList.add("falling");
-    document.querySelector("#rocket_container").classList.add("position1");
+    document.querySelector("#rocket_container").classList.add("rocket_falling");
+    document.querySelector("#rocket_container").classList.add("rocket_position1");
 }
 
 function clickRocket() {
@@ -71,12 +73,16 @@ function rocketGone() {
 }
 
 function restartRocket() {
-    this.classList.remove("falling");
+    this.classList.remove("rocket_falling");
     this.offsetWidth;
-    this.classList.add("falling");
-    this.classList.remove("position1", "position2", "position3", "position4", "position5");
-    const calculation = Math.ceil(Math.random() * 5);
-    this.classList.add(`position${calculation}`);
+    this.classList.add("rocket_falling");
+    this.classList.remove("rocket_position1", "rocket_position2", "rocket_position3", "rocket_position4",
+        "rocket_position5", "rocket_position6", "rocket_position7", "rocket_position8", "rocket_position9",
+        "rocket_position10", "rocket_position11", "rocket_position12", "rocket_position13", "rocket_position14",
+        "rocket_position15", "rocket_position16", "rocket_position17", "rocket_position18");
+    const calculation = Math.ceil(Math.random() * 18);
+    this.classList.add(`rocket_position${calculation}`);
+    console.log(calculation);
 }
 
 function addPoins() {
@@ -87,6 +93,22 @@ function addPoins() {
 function showPoints() {
     document.querySelector("#score_board").textContent = `Score: ${points}`;
 }
+
+
+// Bird
+function startBird() {
+  document.querySelector("#bird_container").classList.add("falling");
+  document.querySelector("#bird_container").classList.add("position1");
+}
+
+
+
+
+
+
+
+
+
 
 // Mangler
 // Fugl(-liv)
