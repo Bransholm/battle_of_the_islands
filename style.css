@@ -133,8 +133,7 @@ button {
 
 #bird_container {
   position: absolute;
-    top: 20%;
-    left: 20%;
+    top: 0;
 }
 
 #bird_sprite {
@@ -307,8 +306,24 @@ button {
     }
 
     100% {
-        transform: translate(62vw
-        , 56.25vw);
+        transform: translate(62vw, 56.25vw);
+    }
+}
+
+.bird_flying {
+    animation-name: bird_flying;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bird_flying {
+    0% {
+        transform: translate(0, -100%);
+    }
+
+    100% {
+        transform: translate(62vw, 56.25vw);
     }
 }
 

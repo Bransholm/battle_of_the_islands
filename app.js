@@ -96,8 +96,8 @@ function showPoints() {
 
 // Bird
 function startBird() {
-  document.querySelector("#bird_container").classList.add("falling");
-  document.querySelector("#bird_container").classList.add("position1");
+  document.querySelector("#bird_container").classList.add("bird_flying");
+  document.querySelector("#bird_container").classList.add("bird_position9");
 }
 
 
