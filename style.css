@@ -131,13 +131,17 @@ button {
   border: none;
 }
 
+.rotate_rocket {
+  transform: rotate(135deg);
+}
+
 #bird_container {
   position: absolute;
     top: 0;
 }
 
 #bird_sprite {
-  width: 25%;
+  width: 30%;
   height: auto;
   border: none;
 }
@@ -295,7 +299,7 @@ button {
 
 .rocket_falling {
     animation-name: rocket_falling;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
