@@ -82,9 +82,8 @@ function restartRocket() {
         "rocket_position15", "rocket_position16", "rocket_position17", "rocket_position18");
     const calculation = Math.ceil(Math.random() * 18);
     this.classList.add(`rocket_position${calculation}`);
-    console.log(calculation);
+    console.log(`rocket ${calculation}`);
 }
-
 function addPoins() {
     points = points + 200;
     showPoints();
