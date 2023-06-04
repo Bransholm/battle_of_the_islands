@@ -108,6 +108,10 @@ button {
   text-align: center;
 }
 
+#score_board {
+  margin-right: 10px;
+}
+
 .hidden,
 #start.hidden,
 #level_complete.hidden,

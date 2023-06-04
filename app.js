@@ -26,8 +26,9 @@ function startGame() {
     startBird();
     document.querySelector("#bird_container").addEventListener("mousedown", clickBird);
     document.querySelector("#bird_container").addEventListener("animationiteration", restartBird);
-    showPoints();
     resetGameVariables();
+    showPoints();
+    showLives();
 }
 
 function showStartScreen () {
@@ -63,7 +64,7 @@ function clickRocket() {
     rocket.querySelector("img").classList.add("rocket_rotate_away");
     rocket.addEventListener("animationend", rocketGone);
     console.log("Rocket clicked");
-    addPoins();
+    removeLives();
 }
 
 function rocketGone() {
@@ -87,14 +88,7 @@ function restartRocket() {
     console.log(`rocket ${calculation}`);
 }
 
-function addPoins() {
-    points = points + 200;
-    showPoints();
-}
 
-function showPoints() {
-    document.querySelector("#score_board").textContent = `Score: ${points}`;
-}
 
 
 // Bird
@@ -152,7 +146,25 @@ function restartBird() {
 }
 
 
+// Lives and points
 
+function removeLives() {
+  lives = --lives;
+  showLives();
+}
+
+function showLives() {
+  document.querySelector("#life_board").textContent = `Lives: ${lives}`;
+}
+
+function addPoins() {
+  points = points + 200;
+  showPoints();
+}
+
+function showPoints() {
+  document.querySelector("#score_board").textContent = `Score: ${points} `;
+}
 
 
 
