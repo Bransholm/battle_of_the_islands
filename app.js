@@ -24,6 +24,8 @@ function startGame() {
     document.querySelector("#rocket_container").addEventListener("mousedown", clickRocket);
     document.querySelector("#rocket_container").addEventListener("animationiteration", restartRocket);
     startBird();
+    document.querySelector("#bird_container").addEventListener("mousedown", clickBird);
+    document.querySelector("#bird_container").addEventListener("animationiteration", restartBird);
     showPoints();
     resetGameVariables();
 }
@@ -101,7 +103,53 @@ function startBird() {
   document.querySelector("#bird_container").classList.add("bird_position9");
 }
 
+function clickBird() {
+  const bird = this;
+  // document.querySelector("#bird_container").removeEventListener("mousedown", clickBird);
+  bird.removeEventListener("mousedown", clickBird);
+  bird.classList.add("paused");
+  bird.querySelector("img").classList.add("bird_rotate_away");
+  bird.addEventListener("animationend", birdGone);
+  console.log("Bird clicked");
+  addPoins();
+}
 
+function birdGone() {
+  this.removeEventListener("animationend", birdGone);
+  this.querySelector("img").classList.remove("bird_rotate_away");
+  this.classList.remove("paused");
+  this.addEventListener("mousedown", clickBird);
+  restartBird.call(this);
+}
+
+function restartBird() {
+  this.classList.remove("bird_flying");
+  this.offsetWidth;
+  this.classList.add("bird_flying");
+  this.classList.remove(
+    "bird_position1",
+    "bird_position2",
+    "bird_position3",
+    "bird_position4",
+    "bird_position5",
+    "bird_position6",
+    "bird_position7",
+    "bird_position8",
+    "bird_position9",
+    "bird_position10",
+    "bird_position11",
+    "bird_position12",
+    "bird_position13",
+    "bird_position14",
+    "bird_position15",
+    "bird_position16",
+    "bird_position17",
+    "bird_position18"
+  );
+  const calculation = Math.ceil(Math.random() * 18);
+  this.classList.add(`bird_position${calculation}`);
+  console.log(`bird ${calculation}`);
+}
 
 
 
