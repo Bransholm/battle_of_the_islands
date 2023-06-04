@@ -335,14 +335,14 @@ button {
     animation-play-state: paused;
 }
 
-.zoom_in {
-    animation-name: zoom_in;
+.rocket_rotate_away {
+    animation-name: rocket_rotate_away;
     animation-duration: 1.7s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes zoom_in {
+@keyframes rocket_rotate_away {
     0% {
         transform: rotate(135deg) scale(1);
     }

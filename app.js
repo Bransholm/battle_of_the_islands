@@ -58,7 +58,7 @@ function clickRocket() {
     // document.querySelector("#rocket_container").removeEventListener("mousedown", clickRocket);
     rocket.removeEventListener("mousedown", clickRocket);
     rocket.classList.add("paused");
-    rocket.querySelector("img").classList.add("zoom_in");
+    rocket.querySelector("img").classList.add("rocket_rotate_away");
     rocket.addEventListener("animationend", rocketGone);
     console.log("Rocket clicked");
     addPoins();
@@ -66,7 +66,7 @@ function clickRocket() {
 
 function rocketGone() {
     this.removeEventListener("animationend", rocketGone);
-    this.querySelector("img").classList.remove("zoom_in");
+    this.querySelector("img").classList.remove("rocket_rotate_away");
     this.classList.remove("paused");
     this.addEventListener("mousedown", clickRocket);
     restartRocket.call(this);
@@ -84,6 +84,7 @@ function restartRocket() {
     this.classList.add(`rocket_position${calculation}`);
     console.log(`rocket ${calculation}`);
 }
+
 function addPoins() {
     points = points + 200;
     showPoints();
