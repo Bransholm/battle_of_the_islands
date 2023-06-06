@@ -109,12 +109,24 @@ button {
 
 #score_board {
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #life_board {
-  font-size: 20px;
+  font-size: 25px;
   margin-right: 12px;
+}
+
+#rocket1 {
+  height: 20px;
+}
+
+#rocket2 {
+  height: 20px;
+}
+
+#rocket3 {
+  height: 20px;
 }
 
 .hidden,
@@ -419,4 +431,12 @@ img {
         scale: 0 1;
         background-color: rgb(156, 53, 53);
     }
+}
+
+.lives_active_rocket {
+    filter: drop-shadow(0 0 2px rgb(21, 255, 0));
+}
+
+.lives_dead_rocket {
+    filter: grayscale(100%) blur(0.5px);
 }

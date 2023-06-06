@@ -28,7 +28,8 @@ function startGame() {
     document.querySelector("#bird_container").addEventListener("animationiteration", restartBird);
     resetGameVariables();
     showPoints();
-    showLives();
+    //showLives();
+    resetLives()
     startTimer();
 }
 
@@ -49,6 +50,12 @@ function showLevelComplete () {
 function resetGameVariables() {
     points = 0;
     lives = 3;
+    document.querySelector("#rocket1").classList.remove("lives_dead_rocket");
+    document.querySelector("#rocket2").classList.remove("lives_dead_rocket");
+    document.querySelector("#rocket3").classList.remove("lives_dead_rocket");
+    document.querySelector("#rocket1").classList.add("lives_active_rocket");
+    document.querySelector("#rocket2").classList.add("lives_active_rocket");
+    document.querySelector("#rocket3").classList.add("lives_active_rocket");
 }
 
 // Rocket
@@ -150,12 +157,14 @@ function restartBird() {
 // Lives and points
 
 function removeLives() {
-  lives = --lives;
-  showLives();
+    showLives();
+    --lives;
 }
 
 function showLives() {
-  document.querySelector("#life_board").textContent = `Lives: ${lives}`;
+  //document.querySelector("#life_board").textContent = `Lives: ${lives}`;
+    document.querySelector("#rocket" + lives).classList.remove("lives_active_rocket");
+    document.querySelector("#rocket" + lives).classList.add("lives_dead_rocket");
 }
 
 function addPoins() {
