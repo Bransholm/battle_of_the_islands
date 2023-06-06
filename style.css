@@ -46,8 +46,7 @@ button {
   position: absolute;
   top: 1vw;
   right: 1vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   font-weight: bold;
 }
 
@@ -110,6 +109,12 @@ button {
 
 #score_board {
   margin-right: 10px;
+  font-size: 20px;
+}
+
+#life_board {
+  font-size: 20px;
+  margin-right: 12px;
 }
 
 .hidden,
@@ -379,4 +384,39 @@ button {
 
 img {
   -webkit-user-drag: none;
+}
+
+.timer {
+  animation-name: timer;
+  animation-duration: 30s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  width: 200px;
+  height: 20px;
+}
+
+#time_container {
+  border: 1px solid white;
+  background-color: transparent;
+  color: transparent;
+}
+
+#time_sprite {
+  transform-origin: right;
+  text-align: right;
+}
+
+@keyframes timer {
+   0% {
+        scale: 1 1;
+        background-color: rgb(7, 241, 7);
+    }
+    50% {
+        background-color: yellow;
+    }
+    100% {
+        scale: 0 1;
+        background-color: rgb(156, 53, 53);
+    }
 }

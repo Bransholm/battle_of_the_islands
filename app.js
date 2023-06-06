@@ -29,6 +29,7 @@ function startGame() {
     resetGameVariables();
     showPoints();
     showLives();
+    startTimer();
 }
 
 function showStartScreen () {
@@ -166,8 +167,12 @@ function showPoints() {
   document.querySelector("#score_board").textContent = `Score: ${points} `;
 }
 
-
-
+// Timer
+function startTimer() {
+    document.querySelector("#time_sprite").classList.add("timer");
+    
+    
+}
 
 
 // Mangler
