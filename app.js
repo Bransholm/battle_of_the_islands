@@ -165,7 +165,8 @@ function removeLives() {
     showLives();
     --lives;
     if (lives <= 0) {
-        showLevelComplete();
+        showGameOver();
+        clearEventlisteners();
     }
 }
 
@@ -189,9 +190,26 @@ function startTimer() {
     document.querySelector("#time_sprite").classList.add("timer"); 
 }
 
-function stopGame() {
-    // Stop animationer
-    
+function clearEventlisteners() {
+    // Remove animationer
+    document.querySelector("#rocket_container").classList.remove("rocket_falling");
+    document.querySelector("#rocket_container").classList.remove("rocket_position8");
+    document.querySelector("#bird_container").classList.remove("bird_flying");
+    document.querySelector("#bird_container").classList.remove("bird_position9");
+
+    // Remove clicks
+    document.querySelector("#rocket_container").removeEventListener("mousedown", clickRocket);
+    document.querySelector("#rocket_container").removeEventListener("animationiteration", restartRocket);
+    document.querySelector("#bird_container").removeEventListener("mousedown", clickBird);
+    document.querySelector("#bird_container").removeEventListener("animationiteration", restartBird);
+
+    // Remove background sound
+    //document.querySelector("#sound_dreams").pause();
+    //document.querySelector("#sound_dreams").currentTime = 0;
+
+    //Remove timer
+    document.querySelector("#time_sprite").classList.remove("timer");
+    console.log("Timer removed");
 }
 
 // Mangler
