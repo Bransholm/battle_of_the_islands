@@ -167,6 +167,7 @@ function removeLives() {
     if (lives <= 0) {
         showGameOver();
         clearEventlisteners();
+        document.querySelector("#game_over_points").textContent = points;
     }
 }
 
