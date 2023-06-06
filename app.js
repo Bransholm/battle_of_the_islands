@@ -28,8 +28,6 @@ function startGame() {
     document.querySelector("#bird_container").addEventListener("animationiteration", restartBird);
     resetGameVariables();
     showPoints();
-    //showLives();
-    resetLives()
     startTimer();
 }
 
@@ -42,9 +40,16 @@ function showStartScreen () {
 
 function showLevelComplete () {
   document.querySelector("#start").classList.add("hidden");
+  document.querySelector("#game_over").classList.add("hidden");
+  document.querySelector("#level_complete").classList.remove("hidden");
+  console.log("Show game over screen");
+}
+
+function showGameOver() {
+  document.querySelector("#start").classList.add("hidden");
   document.querySelector("#game_over").classList.remove("hidden");
   document.querySelector("#level_complete").classList.add("hidden");
-  console.log("Show game over screen");
+  console.log("Show game over");
 }
 
 function resetGameVariables() {
@@ -159,6 +164,9 @@ function restartBird() {
 function removeLives() {
     showLives();
     --lives;
+    if (lives <= 0) {
+        showLevelComplete();
+    }
 }
 
 function showLives() {
@@ -178,11 +186,13 @@ function showPoints() {
 
 // Timer
 function startTimer() {
-    document.querySelector("#time_sprite").classList.add("timer");
-    
-    
+    document.querySelector("#time_sprite").classList.add("timer"); 
 }
 
+function stopGame() {
+    // Stop animationer
+    
+}
 
 // Mangler
 // Fugl(-liv)
