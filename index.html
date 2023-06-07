@@ -65,13 +65,19 @@
         <div id="level_complete_container">
         <p>
           <h2>Congratulation - You have won</h2>
-          You have saved the island...<br />
+          You have saved the island<br />
+          <span>You got <span id="level_complete_points">x</span> points...</span>
           Good job!<br />
           <center><button id="button_level_complete">Go to start</button></center>
         </p>
         </div>
       </section>
     </main>
+    <audio id="sound_rocket" src="sounds/rocket.mp3"></audio>
+    <audio id="sound_bird" src="sounds/bird.mp3"></audio>
+    <audio id="background_sound" src="sounds/background_sound.mp3"></audio>
+    <audio id="sound_game_over" src="sounds/game_over.mp3"></audio>
+    <audio id="sound_level_complete" src="sounds/win.mp3"></audio>
     <script src="app.js"></script>
   </body>
 </html>

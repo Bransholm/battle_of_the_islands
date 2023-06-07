@@ -29,6 +29,7 @@ function startGame() {
     resetGameVariables();
     showPoints();
     startTimer();
+    document.querySelector("#background_sound").play();
 }
 
 function showStartScreen () {
@@ -178,7 +179,7 @@ function showLives() {
 }
 
 function addPoins() {
-  points = points + 200;
+  points = points + 250;
   showPoints();
 }
 
@@ -189,6 +190,23 @@ function showPoints() {
 // Timer
 function startTimer() {
     document.querySelector("#time_sprite").classList.add("timer"); 
+    document.querySelector("#time_sprite").addEventListener("animationend", timerEnd);
+}
+
+function timerEnd() {
+    console.log("timerEnd");
+
+    if (points < 2000) {
+        showGameOver();
+        clearEventlisteners();
+        document.querySelector("#game_over_points").textContent = points;
+    } else if (points >= 2000) {
+        showLevelComplete();
+        clearEventlisteners();
+        document.querySelector("#level_complete_points").textContent = points;
+    } else {
+        console.log("Something went wrong in timerEnd function")
+    }
 }
 
 function clearEventlisteners() {
@@ -205,8 +223,8 @@ function clearEventlisteners() {
     document.querySelector("#bird_container").removeEventListener("animationiteration", restartBird);
 
     // Remove background sound
-    //document.querySelector("#sound_dreams").pause();
-    //document.querySelector("#sound_dreams").currentTime = 0;
+    document.querySelector("#background_sound").pause();
+    document.querySelector("#background_sound").currentTime = 0;
 
     //Remove timer
     document.querySelector("#time_sprite").classList.remove("timer");
