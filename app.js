@@ -238,10 +238,3 @@ function clearEventlisteners() {
     document.querySelector("#time_sprite").classList.remove("timer");
     console.log("Timer removed");
 }
-
-// Mangler
-// Fugl(-liv)
-// liv (hvis liv=0 dræb ellers fortsæt)
-// timer (dø efter x sekunder && vind med fugl > 10 eller point)
-// Lydeffekter og musik
-// Exit game
