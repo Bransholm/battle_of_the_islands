@@ -43,7 +43,9 @@ function showLevelComplete () {
   document.querySelector("#start").classList.add("hidden");
   document.querySelector("#game_over").classList.add("hidden");
   document.querySelector("#level_complete").classList.remove("hidden");
-  console.log("Show game over screen");
+  console.log("Show level complete screen");
+  document.querySelector("#sound_level_complete").currentTime = 0;
+  document.querySelector("#sound_level_complete").play();
 }
 
 function showGameOver() {
@@ -51,6 +53,8 @@ function showGameOver() {
   document.querySelector("#game_over").classList.remove("hidden");
   document.querySelector("#level_complete").classList.add("hidden");
   console.log("Show game over");
+  document.querySelector("#sound_game_over").currentTime = 0;
+  document.querySelector("#sound_game_over").play();
 }
 
 function resetGameVariables() {
@@ -78,6 +82,8 @@ function clickRocket() {
     rocket.querySelector("img").classList.add("rocket_rotate_away");
     rocket.addEventListener("animationend", rocketGone);
     console.log("Rocket clicked");
+    document.querySelector("#sound_rocket").currentTime = 0;
+    document.querySelector("#sound_rocket").play();
     removeLives();
 }
 
@@ -119,6 +125,8 @@ function clickBird() {
   bird.querySelector("img").classList.add("bird_rotate_away");
   bird.addEventListener("animationend", birdGone);
   console.log("Bird clicked");
+  document.querySelector("#sound_bird").currentTime = 0;
+  document.querySelector("#sound_bird").play();
   addPoins();
 }
 
